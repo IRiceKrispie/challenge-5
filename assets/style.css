@@ -26,8 +26,6 @@ textarea {
 }
 
 .time-block {
-  text-align: center;
-  border-radius: 15px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -76,26 +74,34 @@ textarea {
 }
 
 .time-box{
-  border: solid red 4px;
-  padding: 10px;
-  color: red;
+  padding-top: 15px;
+  border: solid black;
+  border-right: 1px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   background-color: #06aed5;
-  
+  color: white;
 }
 
 .input-field{
   width: 100vw;
-  border: solid red 4px;
   padding: 10px;
   color: red;
   background-color: #06aed5;
 }
 
 .button-box{
-  border: none;
-  padding: 10px;
-  color: red;
+  border: solid black;
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: #06aed5;
+  color: white;
+}
+
+.button-box i:hover{
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 ::placeholder{
