@@ -32,6 +32,7 @@ textarea {
   flex-direction: row;
   justify-content: flex-start;
   gap: 2px;
+  margin-bottom: 5px;
 }
 
 .row {
@@ -91,7 +92,7 @@ textarea {
 }
 
 .button-box{
-  border: solid red 4px;
+  border: none;
   padding: 10px;
   color: red;
   background-color: #06aed5;
