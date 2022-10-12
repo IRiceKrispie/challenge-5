@@ -5,6 +5,7 @@ function getTime(){
 }
 //call the getTime function every second so that the time stays updated
 setInterval(getTime,1000);
+setInterval(pastPresentFuture,1000);
 
 //get userinput in 9am field
 $('#9am').submit(function(event){
@@ -67,7 +68,209 @@ $('#5pm').submit(function(event){
     event.preventDefault();
     var userInput =  $('#5pm').children('input').val();
     localStorage.setItem("5pminput", userInput);
-    $('#5pm').children('input').blur();
+    $('#5pm').children('input').blur(); //deslect input field
+})
+
+//style based on time
+function pastPresentFuture(){
+    var currentHour = moment().format("h").valueOf();
+    if (currentHour == 9){
+        $('#9am').children('input').css("background-color", "green");
+        $('#9am').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 10){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "green");
+        $('#10am').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 11){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "gray");
+        $('#10am').children('input').css("color", "white");
+    
+        $('#11am').children('input').css("background-color", "green");
+        $('#11am').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 12){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "gray");
+        $('#10am').children('input').css("color", "white");
+    
+        $('#11am').children('input').css("background-color", "gray");
+        $('#11am').children('input').css("color", "white");
+    
+        $('#12pm').children('input').css("background-color", "green");
+        $('#12pm').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 1){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "gray");
+        $('#10am').children('input').css("color", "white");
+    
+        $('#11am').children('input').css("background-color", "gray");
+        $('#11am').children('input').css("color", "white");
+    
+        $('#12pm').children('input').css("background-color", "gray");
+        $('#12pm').children('input').css("color", "white");
+    
+        $('#1pm').children('input').css("background-color", "green");
+        $('#1pm').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 2){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "gray");
+        $('#10am').children('input').css("color", "white");
+    
+        $('#11am').children('input').css("background-color", "gray");
+        $('#11am').children('input').css("color", "white");
+    
+        $('#12pm').children('input').css("background-color", "gray");
+        $('#12pm').children('input').css("color", "white");
+    
+        $('#1pm').children('input').css("background-color", "gray");
+        $('#1pm').children('input').css("color", "white");
+    
+        $('#2pm').children('input').css("background-color", "green");
+        $('#2pm').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 3){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "gray");
+        $('#10am').children('input').css("color", "white");
+    
+        $('#11am').children('input').css("background-color", "gray");
+        $('#11am').children('input').css("color", "white");
+    
+        $('#12pm').children('input').css("background-color", "gray");
+        $('#12pm').children('input').css("color", "white");
+    
+        $('#1pm').children('input').css("background-color", "gray");
+        $('#1pm').children('input').css("color", "white");
+    
+        $('#2pm').children('input').css("background-color", "gray");
+        $('#2pm').children('input').css("color", "white");
+    
+        $('#3pm').children('input').css("background-color", "green");
+        $('#3pm').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 4){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "gray");
+        $('#10am').children('input').css("color", "white");
+    
+        $('#11am').children('input').css("background-color", "gray");
+        $('#11am').children('input').css("color", "white");
+    
+        $('#12pm').children('input').css("background-color", "gray");
+        $('#12pm').children('input').css("color", "white");
+    
+        $('#1pm').children('input').css("background-color", "gray");
+        $('#1pm').children('input').css("color", "white");
+    
+        $('#2pm').children('input').css("background-color", "gray");
+        $('#2pm').children('input').css("color", "white");
+    
+        $('#3pm').children('input').css("background-color", "gray");
+        $('#3pm').children('input').css("color", "white");
+    
+        $('#4pm').children('input').css("background-color", "green");
+        $('#4pm').children('input').css("color", "white");
+    }
+    
+    if (currentHour == 5){
+        $('#9am').children('input').css("background-color", "gray");
+        $('#9am').children('input').css("color", "white");
+    
+        $('#10am').children('input').css("background-color", "gray");
+        $('#10am').children('input').css("color", "white");
+    
+        $('#11am').children('input').css("background-color", "gray");
+        $('#11am').children('input').css("color", "white");
+    
+        $('#12pm').children('input').css("background-color", "gray");
+        $('#12pm').children('input').css("color", "white");
+    
+        $('#1pm').children('input').css("background-color", "gray");
+        $('#1pm').children('input').css("color", "white");
+    
+        $('#2pm').children('input').css("background-color", "gray");
+        $('#2pm').children('input').css("color", "white");
+    
+        $('#3pm').children('input').css("background-color", "gray");
+        $('#3pm').children('input').css("color", "white");
+    
+        $('#4pm').children('input').css("background-color", "gray");
+        $('#4pm').children('input').css("color", "white");
+    
+        $('#5pm').children('input').css("background-color", "green");
+        $('#5pm').children('input').css("color", "white");
+    }
+}
+
+$('#9am').children('button[type=button]').on("click", function(){
+    localStorage.setItem("9aminput", "");
+    $('#9am').children('input').val('');
+})
+
+$('#10am').children('button[type=button]').on("click", function(){
+    localStorage.setItem("10aminput", "");
+    $('#10am').children('input').val('');
+})
+
+$('#11am').children('button[type=button]').on("click", function(){
+    localStorage.setItem("11aminput", "");
+    $('#11am').children('input').val('');
+})
+
+$('#12pm').children('button[type=button]').on("click", function(){
+    localStorage.setItem("12pminput", "");
+    $('#12pm').children('input').val('');
+})
+
+$('#1pm').children('button[type=button]').on("click", function(){
+    localStorage.setItem("1pminput", "");
+    $('#1pm').children('input').val('');
+})
+
+$('#2pm').children('button[type=button]').on("click", function(){
+    localStorage.setItem("2pminput", "");
+    $('#2pm').children('input').val('');
+})
+
+$('#3pm').children('button[type=button]').on("click", function(){
+    localStorage.setItem("3pminput", "");
+    $('#3pm').children('input').val('');
+})
+
+$('#4pm').children('button[type=button]').on("click", function(){
+    localStorage.setItem("4pminput", "");
+    $('#4pm').children('input').val('');
+})
+
+$('#5pm').children('button[type=button]').on("click", function(){
+    localStorage.setItem("5pminput", "");
+    $('#5pm').children('input').val('');
 })
 //populate fields from values in local storage
 $('#9am').children('input').attr("value", localStorage.getItem("9aminput"));
