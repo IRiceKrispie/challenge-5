@@ -3,6 +3,32 @@ function getTime(){
     var todayTime = moment().format("MMMM Do, YYYY h:m:ss");
     $('#currentDay').text(todayTime);
 }
+//use map to change elements based on time
+function pastPresentFuture(){
+    var currentHour = Number(moment().format("k").valueOf());
+    var mapOfTime = new Map([
+        [$('#9am'),9],
+        [$('#10am'),10],
+        [$('#11am'),11],
+        [$('#12pm'),12],
+        [$('#1pm'),13],
+        [$('#2pm'),14],
+        [$('#3pm'),15],
+        [$('#4pm'),16],
+        [$('#5pm'),17]
+    ]);
+    for(const [key, value] of mapOfTime.entries()){
+        if (value == currentHour){
+            key.children('textarea').addClass("present");
+        }
+        if (value > currentHour){
+            key.children('textarea').addClass("future");
+        }
+        if (value < currentHour){
+            key.children('textarea').addClass("past");
+        }
+    }
+}
 //call the getTime function every second so that the time stays updated
 pastPresentFuture();
 setInterval(getTime,1000);
@@ -127,29 +153,3 @@ $('#2pm').children('textarea').text(localStorage.getItem("2pminput"));
 $('#3pm').children('textarea').text(localStorage.getItem("3pminput"));
 $('#4pm').children('textarea').text(localStorage.getItem("4pminput"));
 $('#5pm').children('textarea').text(localStorage.getItem("5pminput"));
-// use a map to change the class of an element based on time
-function pastPresentFuture(){
-    var currentHour = Number(moment().format("k").valueOf());
-    var mapOfTime = new Map([
-        [$('#9am'),9],
-        [$('#10am'),10],
-        [$('#11am'),11],
-        [$('#12pm'),12],
-        [$('#1pm'),13],
-        [$('#2pm'),14],
-        [$('#3pm'),15],
-        [$('#4pm'),16],
-        [$('#5pm'),17]
-    ]);
-    for(const [key, value] of mapOfTime.entries()){
-        if (value == currentHour){
-            key.children('textarea').addClass("present");
-        }
-        if (value > currentHour){
-            key.children('textarea').addClass("future");
-        }
-        if (value < currentHour){
-            key.children('textarea').addClass("past");
-        }
-    }
-}
