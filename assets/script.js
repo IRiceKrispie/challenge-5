@@ -17,7 +17,7 @@ function pastPresentFuture(){
         [$('#4pm'),16],
         [$('#5pm'),17]
     ]);
-    for(const [key, value] of mapOfTime.entries()){
+    for(const [key, value] of mapOfTime.entries()){ //entries creates an iterator for the map. We use a for of loop to iterate through the map. 
         if (value == currentHour){
             key.children('textarea').addClass("present");
         }
