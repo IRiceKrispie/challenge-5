@@ -4,6 +4,7 @@ function getTime(){
     $('#currentDay').text(todayTime);
 }
 //call the getTime function every second so that the time stays updated
+pastPresentFuture();
 setInterval(getTime,1000);
 setInterval(pastPresentFuture,1000);
 
@@ -71,163 +72,7 @@ $('#5pm').submit(function(event){
     $('#5pm').children('input').blur(); //deslect input field
 })
 
-//style based on time
-function pastPresentFuture(){
-    var currentHour = moment().format("h").valueOf();
-    if (currentHour == 9){
-        $('#9am').children('input').css("background-color", "green");
-        $('#9am').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 10){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "green");
-        $('#10am').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 11){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "gray");
-        $('#10am').children('input').css("color", "white");
-    
-        $('#11am').children('input').css("background-color", "green");
-        $('#11am').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 12){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "gray");
-        $('#10am').children('input').css("color", "white");
-    
-        $('#11am').children('input').css("background-color", "gray");
-        $('#11am').children('input').css("color", "white");
-    
-        $('#12pm').children('input').css("background-color", "green");
-        $('#12pm').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 1){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "gray");
-        $('#10am').children('input').css("color", "white");
-    
-        $('#11am').children('input').css("background-color", "gray");
-        $('#11am').children('input').css("color", "white");
-    
-        $('#12pm').children('input').css("background-color", "gray");
-        $('#12pm').children('input').css("color", "white");
-    
-        $('#1pm').children('input').css("background-color", "green");
-        $('#1pm').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 2){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "gray");
-        $('#10am').children('input').css("color", "white");
-    
-        $('#11am').children('input').css("background-color", "gray");
-        $('#11am').children('input').css("color", "white");
-    
-        $('#12pm').children('input').css("background-color", "gray");
-        $('#12pm').children('input').css("color", "white");
-    
-        $('#1pm').children('input').css("background-color", "gray");
-        $('#1pm').children('input').css("color", "white");
-    
-        $('#2pm').children('input').css("background-color", "green");
-        $('#2pm').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 3){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "gray");
-        $('#10am').children('input').css("color", "white");
-    
-        $('#11am').children('input').css("background-color", "gray");
-        $('#11am').children('input').css("color", "white");
-    
-        $('#12pm').children('input').css("background-color", "gray");
-        $('#12pm').children('input').css("color", "white");
-    
-        $('#1pm').children('input').css("background-color", "gray");
-        $('#1pm').children('input').css("color", "white");
-    
-        $('#2pm').children('input').css("background-color", "gray");
-        $('#2pm').children('input').css("color", "white");
-    
-        $('#3pm').children('input').css("background-color", "green");
-        $('#3pm').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 4){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "gray");
-        $('#10am').children('input').css("color", "white");
-    
-        $('#11am').children('input').css("background-color", "gray");
-        $('#11am').children('input').css("color", "white");
-    
-        $('#12pm').children('input').css("background-color", "gray");
-        $('#12pm').children('input').css("color", "white");
-    
-        $('#1pm').children('input').css("background-color", "gray");
-        $('#1pm').children('input').css("color", "white");
-    
-        $('#2pm').children('input').css("background-color", "gray");
-        $('#2pm').children('input').css("color", "white");
-    
-        $('#3pm').children('input').css("background-color", "gray");
-        $('#3pm').children('input').css("color", "white");
-    
-        $('#4pm').children('input').css("background-color", "green");
-        $('#4pm').children('input').css("color", "white");
-    }
-    
-    if (currentHour == 5){
-        $('#9am').children('input').css("background-color", "gray");
-        $('#9am').children('input').css("color", "white");
-    
-        $('#10am').children('input').css("background-color", "gray");
-        $('#10am').children('input').css("color", "white");
-    
-        $('#11am').children('input').css("background-color", "gray");
-        $('#11am').children('input').css("color", "white");
-    
-        $('#12pm').children('input').css("background-color", "gray");
-        $('#12pm').children('input').css("color", "white");
-    
-        $('#1pm').children('input').css("background-color", "gray");
-        $('#1pm').children('input').css("color", "white");
-    
-        $('#2pm').children('input').css("background-color", "gray");
-        $('#2pm').children('input').css("color", "white");
-    
-        $('#3pm').children('input').css("background-color", "gray");
-        $('#3pm').children('input').css("color", "white");
-    
-        $('#4pm').children('input').css("background-color", "gray");
-        $('#4pm').children('input').css("color", "white");
-    
-        $('#5pm').children('input').css("background-color", "green");
-        $('#5pm').children('input').css("color", "white");
-    }
-}
-
+//clear field buttons
 $('#9am').children('button[type=button]').on("click", function(){
     localStorage.setItem("9aminput", "");
     $('#9am').children('input').val('');
@@ -282,3 +127,29 @@ $('#2pm').children('input').attr("value", localStorage.getItem("2pminput"));
 $('#3pm').children('input').attr("value", localStorage.getItem("3pminput"));
 $('#4pm').children('input').attr("value", localStorage.getItem("4pminput"));
 $('#5pm').children('input').attr("value", localStorage.getItem("5pminput"));
+// map attempt
+function pastPresentFuture(){
+    var currentHour = Number(moment().format("k").valueOf());
+    var mapOfTime = new Map([
+        [$('#9am'),9],
+        [$('#10am'),10],
+        [$('#11am'),11],
+        [$('#12pm'),12],
+        [$('#1pm'),13],
+        [$('#2pm'),14],
+        [$('#3pm'),15],
+        [$('#4pm'),16],
+        [$('#5pm'),17]
+    ]);
+    for(const [key, value] of mapOfTime.entries()){
+        if (value == currentHour){
+            key.children('input').addClass("present");
+        }
+        if (value > currentHour){
+            key.children('input').addClass("future");
+        }
+        if (value < currentHour){
+            key.children('input').addClass("past");
+        }
+    }
+}
