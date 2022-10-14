@@ -98,51 +98,6 @@ $('#5pm').submit(function(event){
     $('#5pm').children('textarea').blur(); //deslect input field
 })
 
-//clear field buttons
-$('#9am').children('button[type=button]').on("click", function(){
-    localStorage.setItem("9aminput", "");
-    $('#9am').children('textarea').val('');
-})
-
-$('#10am').children('button[type=button]').on("click", function(){
-    localStorage.setItem("10aminput", "");
-    $('#10am').children('textarea').val('');
-})
-
-$('#11am').children('button[type=button]').on("click", function(){
-    localStorage.setItem("11aminput", "");
-    $('#11am').children('textarea').val('');
-})
-
-$('#12pm').children('button[type=button]').on("click", function(){
-    localStorage.setItem("12pminput", "");
-    $('#12pm').children('textarea').val('');
-})
-
-$('#1pm').children('button[type=button]').on("click", function(){
-    localStorage.setItem("1pminput", "");
-    $('#1pm').children('textarea').val('');
-})
-
-$('#2pm').children('button[type=button]').on("click", function(){
-    localStorage.setItem("2pminput", "");
-    $('#2pm').children('textarea').val('');
-})
-
-$('#3pm').children('button[type=button]').on("click", function(){
-    localStorage.setItem("3pminput", "");
-    $('#3pm').children('textarea').val('');
-})
-
-$('#4pm').children('button[type=button]').on("click", function(){
-    localStorage.setItem("4pminput", "");
-    $('#4pm').children('textarea').val('');
-})
-
-$('#5pm').children('button[type=button]').on("click", function(){
-    localStorage.setItem("5pminput", "");
-    $('#5pm').children('textarea').val('');
-})
 //populate fields from values in local storage
 $('#9am').children('textarea').text(localStorage.getItem("9aminput"));
 $('#10am').children('textarea').text(localStorage.getItem("10aminput"));
