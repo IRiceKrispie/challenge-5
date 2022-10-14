@@ -29,17 +29,17 @@ function pastPresentFuture(){
         }
     }
 }
-//call the getTime function every second so that the time stays updated
+
 pastPresentFuture();
-setInterval(getTime,1000);
-setInterval(pastPresentFuture,1000);
+setInterval(getTime,1000);//call the getTime function every second so that the time stays updated
+setInterval(pastPresentFuture,1000);//call the pastPresentFuture function every second so that color update when the hour changes and the page is open
 
 //get userinput in 9am field
-$('#9am').submit(function(event){
-    event.preventDefault();
-    var userInput =  $('#9am').children('textarea').val();
-    localStorage.setItem("9aminput", userInput);
-    $('#9am').children('textarea').blur();
+$('#9am').submit(function(event){ //listen for any submit evetns
+    event.preventDefault(); //prevent refresh of the page
+    var userInput =  $('#9am').children('textarea').val();//get the value that is in the text area
+    localStorage.setItem("9aminput", userInput);//save it to local storage
+    $('#9am').children('textarea').blur(); //after submit have the text area lose focus
 })
 //get userinput in 10am field
 $('#10am').submit(function(event){
@@ -98,7 +98,7 @@ $('#5pm').submit(function(event){
     $('#5pm').children('textarea').blur(); //deslect input field
 })
 
-//populate fields from values in local storage
+//populate fields from values in local storage. All fields are populated when the page refreshes.
 $('#9am').children('textarea').text(localStorage.getItem("9aminput"));
 $('#10am').children('textarea').text(localStorage.getItem("10aminput"));
 $('#11am').children('textarea').text(localStorage.getItem("11aminput"));
